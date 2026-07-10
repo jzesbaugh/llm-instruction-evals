@@ -4,6 +4,14 @@ A lightweight methodology for testing whether custom instructions given to an LL
 
 Built and used in production on a personal ~2,000-word instruction system (36 rules covering file safety, epistemic hygiene, and prompt-injection handling). This repo contains the sanitized protocol, the scorecard format, and a full case study in which a design prediction was falsified by testing and fixed the same day.
 
+## Why bother with a rule set at all?
+
+Your AI assistant is already running on rules. You just didn't write them. Every default behavior it has — when it hedges, when it agrees with you, when it creates files you never asked for, when it swallows your bad assumptions whole — is a policy decision someone else made, tuned for everyone in general and for you never.
+
+A written rule set takes that back. It decides what gets checked before it's believed, what never happens to your files, what *firm* means when you say firm. Thirty-six sentences turn a general-purpose model into your instrument. That's not a power-user luxury; it's the difference between renting your tools' behavior and owning it.
+
+But here's the part almost everyone skips, and the reason this repo exists: an unwritten rule is a decision you delegated, and an untested rule is a superstition. You wrote the sentence. You feel governed by it. You have no idea whether it changed anything. The gap between "my AI has instructions" and "my AI has instructions that measurably work" is the entire subject of this repository — and crossing it took one day and zero infrastructure.
+
 **The one-line thesis:** "we predicted X, measured not-X, and fixed it" is the difference between prompt engineering and prompt guessing.
 
 ## Why blind testing
